@@ -1,4 +1,5 @@
 import React from 'react';
+import {data} from "./data.js"
 import sx from "../images/sx.jpg";
 import "../CSS/card.css";
 import BedIcon from '@mui/icons-material/Bed';

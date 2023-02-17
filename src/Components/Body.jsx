@@ -1,32 +1,60 @@
-import React from 'react';
+import React , {useState} from 'react';
+import {data} from "./data.js";
 import "../CSS/body.css";
 import Search from './Search';
-import Card from './Card';
+import sx from "../images/sx.jpg";
+import "../CSS/card.css";
+import BedIcon from '@mui/icons-material/Bed';
+import BathtubIcon from '@mui/icons-material/Bathtub';
+import CropSquareIcon from '@mui/icons-material/CropSquare';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import Card from './Card';
 
 function Body() {
+    const [search , setSearch] = useState("");
+
   return (
     <div className='body'>
         <div className='body1'>
             <h1>Search properties to rent</h1>
-            <input type="search" placeholder='Search'></input>
+            <input type="search" placeholder='Search' onChange={(e)=>{setSearch(e.target.value)}}></input>
         </div>
         <Search />
         <div className='cards'>
-            <Card name="Sherlock House" price="$2200"/>
-            <Card name="Watson House" price="$1500" />
-            <Card name="Western Avenue" price="$3000" />
-            <Card name="Amaan Hilton" price="$2500" />
-            <Card name="Hilton Carter" price="$800" />
-            <Card name="Yorkingel" price="$11520" />
-            <Card name="White House" price="$8400" />
-            <Card name="Palm Harbor" price="$4000" />
-            <Card name="Beverly SpringField" price="$990" />
-            <Card name="Faulkner Ave" price="$2312" />
-            <Card name="Elementary Residency" price="$5000" />
-            <Card name="Akuma house" price="$1213" />
-            <Card name="Freemangood" price="$1536" />
-            <Card name="Western Avenue" price="$2000" />
-            <Card name="Easy home" price="$4500" />
+            {
+                data.map((item , key)=>(
+                    <div className='card-section'> 
+                        <div className='card'>
+                            <div className='card-img'>
+                                <img src={sx} />
+                            </div>
+                            <div className='card-info'>
+                                <div className='heart'>
+                                    <p className='price'><span>{item.price}</span>/month</p>
+                                    <FavoriteBorderIcon className='hearts' />
+                                </div>
+                                <p className='housename'>{item.house}</p>
+                                <p className='addr'>{item.addr}</p>
+                            </div>
+                            <hr />
+                            <div className='card-icon'>
+                                <div className='icons'> 
+                                    <BedIcon className='icon' /> 
+                                    <span>4 beds</span>
+                                </div>
+                                <div className='icons'> 
+                                    <BathtubIcon className='icon' />
+                                    <span>4 bathrooms</span>
+                                </div>
+                                <div className='icons'>
+                                    <CropSquareIcon className='icon' />
+                                    <span> 220 m2</span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
         </div>
     </div>
   )

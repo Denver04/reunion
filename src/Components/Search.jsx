@@ -25,7 +25,7 @@ function Search() {
             <input type="text" placeholder='House'></input>
         </div>
         <hr />
-        <Button variant="contained" style={{backgroundColor:"rgb(124 77 255)" , color:"white"}}>Signup</Button>
+        <Button variant="contained" style={{backgroundColor:"rgb(124 77 255)" , color:"white" , padding:"7px 35px"}}>Search</Button>
     </div>
   )
 }

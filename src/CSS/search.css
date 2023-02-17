@@ -1,0 +1,32 @@
+.search{
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+hr{
+    transform: rotateZ(90deg);
+    width: 80px;
+}
+.search-tag{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 10px;
+}
+.search-tag input{
+    margin-top: 10px;
+    border: none;
+    border-bottom: solid thin;
+    font-size: 16px;
+}
+.search-tag input:focus-visible{
+    outline: none;
+    border-bottom: solid thin;
+}
+/* .search-tag input::placeholder{
+    content: "";
+} */

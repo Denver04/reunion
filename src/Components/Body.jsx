@@ -1,5 +1,6 @@
 import React from 'react';
 import "../CSS/body.css";
+import Search from './Search';
 
 function Body() {
   return (
@@ -8,6 +9,7 @@ function Body() {
             <h1>Search properties to rent</h1>
             <input type="search" placeholder='Search'></input>
         </div>
+        <Search />
     </div>
   )
 }

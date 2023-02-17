@@ -17,13 +17,17 @@ function Body() {
     <div className='body'>
         <div className='body1'>
             <h1>Search properties to rent</h1>
-            <input type="search" placeholder='Search' onChange={(e)=>{setSearch(e.target.value)}}></input>
+            <input type="search" placeholder='Search....' onChange={(e)=>{setSearch(e.target.value)}}></input>
         </div>
         <Search />
         <div className='cards'>
             {
-                data.map((item , key)=>(
-                    <div className='card-section'> 
+                data.filter((item)=>{
+                    return search.toLowerCase() === " " ?
+                    item :
+                    item.house.toLowerCase().includes(search)
+                }).map((item , key)=>(
+                    <div className='card-section' key={item.id}> 
                         <div className='card'>
                             <div className='card-img'>
                                 <img src={sx} />

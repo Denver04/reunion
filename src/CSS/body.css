@@ -1,0 +1,13 @@
+.body1{
+    display: flex;
+    width: 80%;
+    margin: 50px auto;
+   align-items: center;
+   justify-content: space-between;
+}
+.body1 input{
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: solid thin;
+}

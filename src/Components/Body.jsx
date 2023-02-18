@@ -1,9 +1,9 @@
 import React , {useState} from 'react';
 import {data} from "./data.js";
 import "../CSS/body.css";
-import Search from './Search';
-import sx from "../images/sx.jpg";
+import "../CSS/search.css";
 import "../CSS/card.css";
+import sx from "../images/sx.jpg";
 import { Button } from '@mui/material';
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
@@ -12,7 +12,6 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ApartmentRoundedIcon from '@mui/icons-material/ApartmentRounded';
 import DatePicker from 'react-multi-date-picker';
 import InputIcon from 'react-multi-date-picker/components/input_icon';
-// import Card from './Card';
 
 function Body() {
     const [search , setSearch] = useState("");
@@ -59,7 +58,7 @@ function Body() {
                 <hr />
                 <div className='search-tag'>
                     <label>Property type</label>
-                    <input type="search" className='type-search' placeholder='House , office or Company' onChange={(e)=>{setType(e.target.value)}}></input>
+                    <input type="search" className='type-search' placeholder='House, office or Company' onChange={(e)=>{setType(e.target.value)}}></input>
                 </div>
                 <hr />
                 <Button variant="contained" style={{backgroundColor:"rgb(124 77 255)" , color:"white" , padding:"7px 35px"}}>Search</Button>

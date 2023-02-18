@@ -12,7 +12,7 @@ function Search() {
         <hr />
         <div className='search-tag'>
             <label>When</label>
-            <input type="date" placeholder='Select move in date'></input>
+            <input type="text" className='date-search' placeholder='Select move in date' onFocus='(type = "date")'></input>
         </div>
         <hr />
         <div className='search-tag'>

@@ -15,19 +15,21 @@
 .search-tag{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
     margin: 0 10px;
 }
 .search-tag input{
     margin-top: 10px;
     border: none;
+    font-weight: bold;
     border-bottom: solid thin;
     font-size: 16px;
 }
 .search-tag input:focus-visible{
     outline: none;
     border-bottom: solid thin;
+    font-weight: bold;
 }
-/* .search-tag input::placeholder{
-    content: "";
-} */
+.search-tag .type-search::placeholder{
+    font-size: 14px;
+}

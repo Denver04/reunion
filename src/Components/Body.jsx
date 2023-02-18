@@ -4,14 +4,20 @@ import "../CSS/body.css";
 import Search from './Search';
 import sx from "../images/sx.jpg";
 import "../CSS/card.css";
+import { Button } from '@mui/material';
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import CropSquareIcon from '@mui/icons-material/CropSquare';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ApartmentRoundedIcon from '@mui/icons-material/ApartmentRounded';
+import DatePicker from 'react-multi-date-picker';
+import InputIcon from 'react-multi-date-picker/components/input_icon';
 // import Card from './Card';
 
 function Body() {
     const [search , setSearch] = useState("");
+    const [location , setLocation] = useState("");
+    const [type , setType] = useState("");
 
   return (
     <div className='body'>
@@ -19,14 +25,49 @@ function Body() {
             <h1>Search properties to rent</h1>
             <input type="search" placeholder='Search....' onChange={(e)=>{setSearch(e.target.value)}}></input>
         </div>
-        <Search />
+        {/* <div className='search-tag'>
+            <label>Location</label>
+            <input type="search" placeholder='New York' onChange={(e)=>{setLocation(e.target.value)}}></input>
+        </div>
+        <Search /> */}
+        <div>
+            <div className='search'>
+                <div className='search-tag'>
+                    <label>Location</label>
+                    <input type="search" placeholder='New York' onChange={(e)=>{setLocation(e.target.value)}}></input>
+                </div>
+                <hr />
+                <div className='search-tag'>
+                    <label>When</label>
+                    {/* <input type="text" className='date-search' placeholder='Select move in date' onFocus={(e) => (e.target.type = "date")}></input> */}
+                    <DatePicker 
+                        render={<InputIcon/>}
+                    />   
+                </div>
+                <hr />
+                <div className='search-tag'>
+                    <label>Price</label>
+                    <input type="number" placeholder='0'></input>
+                </div>
+                <hr />
+                <div className='search-tag'>
+                    <label>Property type</label>
+                    <input type="search" className='type-search' placeholder='House , office or Company' onChange={(e)=>{setType(e.target.value)}}></input>
+                </div>
+                <hr />
+                <Button variant="contained" style={{backgroundColor:"rgb(124 77 255)" , color:"white" , padding:"7px 35px"}}>Search</Button>
+            </div>
+        </div>
         <div className='cards'>
             {
                 data.filter((item)=>{
-                    return search.toLowerCase() === " " ?
+                    return search.toLowerCase() === " " && location.toLowerCase() === " " && type.toLowerCase() === " " ?
                     item :
-                    item.house.toLowerCase().includes(search)
+                    item.house.toLowerCase().includes(search) && 
+                    item.addr.toLowerCase().includes(location) && 
+                    item.type.toLowerCase().includes(type)
                 }).map((item , key)=>(
+                    // console.log(item.length())
                     <div className='card-section' key={item.id}> 
                         <div className='card'>
                             <div className='card-img'>
@@ -38,6 +79,7 @@ function Body() {
                                     <FavoriteBorderIcon className='hearts' />
                                 </div>
                                 <p className='housename'>{item.house}</p>
+                                <p className='type'> <ApartmentRoundedIcon /> {item.type}</p>
                                 <p className='addr'>{item.addr}</p>
                             </div>
                             <hr />
@@ -65,3 +107,5 @@ function Body() {
 }
 
 export default Body
+
+//house H capital m nhi show kr rha

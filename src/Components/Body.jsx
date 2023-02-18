@@ -18,6 +18,8 @@ function Body() {
     const [search , setSearch] = useState("");
     const [location , setLocation] = useState("");
     const [type , setType] = useState("");
+    const [ Lprice, setLPrice ] = useState(0);
+    const [ Mprice, setMPrice ] = useState(5000000);
 
   return (
     <div className='body'>
@@ -39,15 +41,20 @@ function Body() {
                 <hr />
                 <div className='search-tag'>
                     <label>When</label>
-                    {/* <input type="text" className='date-search' placeholder='Select move in date' onFocus={(e) => (e.target.type = "date")}></input> */}
-                    <DatePicker 
+                    <input type="text" className='date-search' placeholder='Select move in date' onFocus={(e) => (e.target.type = "date")}></input>
+                    {/* <DatePicker 
                         render={<InputIcon/>}
-                    />   
+                    />    */}
                 </div>
                 <hr />
                 <div className='search-tag'>
-                    <label>Price</label>
-                    <input type="number" placeholder='0'></input>
+                    <label>Min Price</label>
+                    <input type="number" placeholder='0' onChange={(e)=>{setLPrice(e.target.value)}}></input>
+                </div>
+                <hr />
+                <div className='search-tag'>
+                    <label>Max Price</label>
+                    <input type="number" placeholder='0' onChange={(e)=>{setMPrice(e.target.value)}}></input>
                 </div>
                 <hr />
                 <div className='search-tag'>
@@ -61,13 +68,14 @@ function Body() {
         <div className='cards'>
             {
                 data.filter((item)=>{
-                    return search.toLowerCase() === " " && location.toLowerCase() === " " && type.toLowerCase() === " " ?
+                    return search.toLowerCase() === " " && location.toLowerCase() === " " && type.toLowerCase() === " " && Lprice === " " && Mprice === " " ?
                     item :
-                    item.house.toLowerCase().includes(search) && 
-                    item.addr.toLowerCase().includes(location) && 
-                    item.type.toLowerCase().includes(type)
+                    item.house.toLowerCase().includes(search.toLowerCase()) && 
+                    item.addr.toLowerCase().includes(location.toLowerCase()) && 
+                    item.type.toLowerCase().includes(type.toLowerCase()) &&
+                    item.price > parseInt(Lprice) &&
+                    item.price < parseInt(Mprice)
                 }).map((item , key)=>(
-                    // console.log(item.length())
                     <div className='card-section' key={item.id}> 
                         <div className='card'>
                             <div className='card-img'>
@@ -75,7 +83,7 @@ function Body() {
                             </div>
                             <div className='card-info'>
                                 <div className='heart'>
-                                    <p className='price'><span>{item.price}</span>/month</p>
+                                    <p className='price'><span>${item.price}</span>/month</p>
                                     <FavoriteBorderIcon className='hearts' />
                                 </div>
                                 <p className='housename'>{item.house}</p>
@@ -94,7 +102,7 @@ function Body() {
                                 </div>
                                 <div className='icons'>
                                     <CropSquareIcon className='icon' />
-                                    <span> 220 m2</span> 
+                                    <span> 220 m<sup>2</sup></span> 
                                 </div>
                             </div>
                         </div>
@@ -107,5 +115,3 @@ function Body() {
 }
 
 export default Body
-
-//house H capital m nhi show kr rha

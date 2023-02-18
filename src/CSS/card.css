@@ -34,7 +34,7 @@
 }
 .card-info .price{
     font-size: 15px;
-    margin: 10px;
+    margin: 1px 10px;
     font-weight: 400;
     color: grey;
     text-align: center;
@@ -46,7 +46,7 @@
 }
 .card-info .housename{
     font-size: 27px;
-    margin: 10px;
+    margin: 0 10px;
     font-weight: bold;
 }
 .card-info .addr{
@@ -63,7 +63,7 @@
 hr{
     transform: none;
     width: 90%;
-    margin: 7px auto;
+    margin: 2px auto;
 }
 .card-icon .icons .icon{
     color: rgb(124 77 255);
@@ -103,5 +103,5 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 3px;
 }

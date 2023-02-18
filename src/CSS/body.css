@@ -2,7 +2,7 @@
 
 .body{
     width: 80%;
-    margin: 50px auto;
+    margin: 20vh auto 10vh;
 }
 .body1{
     display: flex;
@@ -12,7 +12,7 @@
 }
 .body1 input{
     font-size: 20px;
-    width: 28%;
+    min-width: 25%;
     padding: 12px 20px;
     border-radius: 5px;
     border: solid thin;
@@ -21,6 +21,6 @@
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    gap: 10px 15px;
+    gap: 10px 22px;
     flex-wrap: wrap;
 }

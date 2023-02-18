@@ -41,3 +41,12 @@
 .search-tag label{
     font-weight: bold;
 }
+.select-search{
+    border: solid thin;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 4px 4px;
+}
+.search-tag select{
+    margin: 10px 0;
+}

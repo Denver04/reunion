@@ -55,6 +55,9 @@
     .card-section .card .icons span{
         font-size: 10px;
     }
+    .search-tag select{
+        margin: 10px 0;
+    }
 }
 
 @media screen and (min-width:600px) and (max-width:1000px){
@@ -119,6 +122,9 @@
     }
     .cards .card-section{
         width: 45%;
+    }
+    .search-tag label{
+        font-size: 14px;
     }
     .cards{
         justify-content: center;

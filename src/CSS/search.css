@@ -33,7 +33,7 @@
     font-weight: bold;
 }
 .search-tag .type-search::placeholder{
-    font-size: 9px;
+    font-size: 10px;
 }
 .search-tag .date-search::placeholder{
     font-size: 12px;

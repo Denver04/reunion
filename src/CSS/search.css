@@ -50,3 +50,8 @@
 .search-tag select{
     margin: 10px 0;
 }
+.search-tag select option{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px;
+}

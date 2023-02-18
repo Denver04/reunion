@@ -34,7 +34,8 @@
 }
 .navbar-tags button{
     color: black;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
 }
 .navbar-tags button:hover{
     color: rgb(124 77 255);

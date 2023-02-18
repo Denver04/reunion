@@ -1,0 +1,136 @@
+@media screen and (max-width:500px) {
+    .navbar{
+        display: unset;
+        padding: 10px;
+    }
+    .navbar-icon{
+        width: unset;
+    }
+    .navbar-tags , .navbar-btn{
+        display: none;
+    }
+    .body .body1{
+        display: unset;
+    }
+    .body1 input {
+        max-width: 100%;
+    }
+    .body1 h1{
+        font-size: 28px;
+        margin: 0px 0 15px 0px;
+    }
+    .card .card-info .housename{
+        font-size: 24px;
+    }
+    .divsearch .search{
+        display: unset;
+        padding: unset;
+        box-shadow: none;
+    }
+    .divsearch{
+        margin: 30px 0;
+    }
+    .search .search-tag{
+        width: unset;
+    }
+    .divsearch .search hr{
+        transform: none;
+        display: none;
+    }
+    .divsearch .search .search-tag input{
+        margin: 15px 0;
+    }
+    .cards{
+        display: unset;
+    }
+    .cards .card-section{
+        width: 100%;
+    }
+    .cards .card-section .card-icon{
+        padding: 10px 10px;
+    }
+    .card-section .card .icons{
+        gap: 0;
+    }
+    .card-section .card .icons span{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1000px){
+    .navbar{
+        /* display: unset; */
+        padding: 14px;
+    }
+    .navbar-icon{
+        width: unset;
+    }
+    .navbar-tags{
+        width: initial;
+        gap: 10px;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+    .navbar-tags button {
+        font-size: 11px;
+    }
+    .navbar-btn{
+        display: none;
+    }
+    .divsearch .search hr{
+        display: none;
+    }
+    .divsearch .search .search-tag{
+        width: 30%;
+    }
+    .divsearch .search{
+        flex-wrap: wrap;
+        gap:30px;
+    }
+    .cards .card-section{
+        width: 48%;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:765px){
+    .cards .card-section{
+        width: 70%;
+    }
+    .cards{
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:766px) and (max-width:865px){
+    .card-section .card .card-icon{
+        padding: 15px;
+    }
+    .card .card-icon .icons span {
+        font-size: 12px;
+    }
+    .cards{
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:1002px) and (max-width:1150px){
+    .App .body{
+        width: 95%;
+    }
+    .cards .card-section{
+        width: 45%;
+    }
+    .cards{
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width:1152px) and (max-width:1285px){
+    .cards .card-section{
+        width: 45%;
+    }
+    .cards{
+        justify-content: center;
+    }
+}

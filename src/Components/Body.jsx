@@ -3,15 +3,14 @@ import {data} from "./data.js";
 import "../CSS/body.css";
 import "../CSS/search.css";
 import "../CSS/card.css";
+import "../CSS/responsive.css";
 import sx from "../images/sx.jpg";
-import { Button } from '@mui/material';
+import { Button, LinearProgress } from '@mui/material';
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import CropSquareIcon from '@mui/icons-material/CropSquare';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ApartmentRoundedIcon from '@mui/icons-material/ApartmentRounded';
-import DatePicker from 'react-multi-date-picker';
-import InputIcon from 'react-multi-date-picker/components/input_icon';
 
 function Body() {
     const [search , setSearch] = useState("");
@@ -31,7 +30,7 @@ function Body() {
             <input type="search" placeholder='New York' onChange={(e)=>{setLocation(e.target.value)}}></input>
         </div>
         <Search /> */}
-        <div>
+        <div className='divsearch'>
             <div className='search'>
                 <div className='search-tag'>
                     <label>Location</label>
@@ -41,9 +40,7 @@ function Body() {
                 <div className='search-tag'>
                     <label>When</label>
                     <input type="text" className='date-search' placeholder='Select move in date' onFocus={(e) => (e.target.type = "date")}></input>
-                    {/* <DatePicker 
-                        render={<InputIcon/>}
-                    />    */}
+                    
                 </div>
                 <hr />
                 <div className='search-tag'>
@@ -114,3 +111,8 @@ function Body() {
 }
 
 export default Body
+
+
+{/* <DatePicker 
+                        render={<InputIcon/>}
+                    />    */}

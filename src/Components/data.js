@@ -1,18 +1,19 @@
-// import sx from "../images/sx.jpg";
 
-export const data = [
+const data = [
     {
         id:1,
         house:"Sherlock House",
         price:2200,
         type:"House",
-        addr:"231 block near dighi street , Raxaul",
+        image:"../images/sx.jpg",
+        addr:"AIT near Dighi Hills , Raxaul",
     },
     {
         id:2,
         house:"Watson House",
         price:1500,
         type:"Company",
+        image:"../images/sx1.png",
         addr:"231 block near dighi street , Motihari",
     },
     {
@@ -20,6 +21,7 @@ export const data = [
         house:"Western Avenue",
         price:3000,
         type:"Office",
+        image:"../images/sx2.jpg",
         addr:"231 block near dighi street , Meerut",
     },
     {
@@ -27,13 +29,15 @@ export const data = [
         house:"Amaan Hilton",
         price:2500,
         type:"House",
-        addr:"231 block near dighi street , Hyderabad",
+        image:"../images/sx3.jpg",
+        addr:"AIT near Dighi Hills , Hyderabad",
     },
     {
         id:5,
         house:"Hilton Carter",
         price:800,
         type:"Company",
+        image:"../images/sx4.jpg",
         addr:"231 block near dighi street , Uttrakhand",
     },
     {
@@ -41,13 +45,15 @@ export const data = [
         house:"Yorkingel",
         price:11520,
         type:"office",
-        addr:"231 block near dighi street , Jammu",
+        image:"../images/sx5.jpg",
+        addr:"AIT near Dighi Hills, Jammu",
     },
     {
         id:7,
         house:"White House",
         price:8400,
         type:"House",
+        image:"../images/sx6.jpg",
         addr:"231 block near dighi street , UP",
     },
     {
@@ -55,20 +61,23 @@ export const data = [
         house:"Palm Harbor",
         price:4000,
         type:"Company",
-        addr:"231 block near dighi street , Kolkata",
+        image:"../images/sx7.jpg",
+        addr:"AIT near Dighi Hills, Kolkata",
     },
     {
         id:9,
         house:"Beverly SpringField",
         price:990,
         type:"Office",
-        addr:"231 block near dighi street , Pune",
+        image:"../images/sx8.jpeg",
+        addr:"AIT near Dighi Hills , Pune",
     },
     {
         id:10,
         house:"Faulkner Ave",
         price:2312,
         type:"House",
+        image:"../images/sx9.jpeg",
         addr:"231 block near dighi street , Mumbai",
     },
     {
@@ -76,27 +85,33 @@ export const data = [
         house:"Elementary Residency",
         price:5000,
         type:"Company",
-        addr:"231 block near dighi street , delhi",
+        image:"../images/sx.jpg",
+        addr:"AIT near Dighi Hills , delhi",
     },
     {
         id:12,
         house:"Akuma house",
         price:1213,
         type:"Office",
-        addr:"231 block near dighi street , Agra",
+        image:"../images/sx3.jpg",
+        addr:"AIT near Dighi Hills , Agra",
     },
     {
         id:13,
         house:"Freemangood",
         price:4500,
         type:"Company",
-        addr:"231 block near dighi street , Chennai",
+        image:"../images/sx3.jpg",
+        addr:"AIT near Dighi Hills , Chennai",
     },
     {
         id:14,
         house:"Easy home",
         price:2000,
         type:"House",
+        image:"../images/sx5.jpg",
         addr:"231 block near dighi street , Banglore",
     },
 ]
+
+export default data;

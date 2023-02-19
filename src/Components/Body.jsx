@@ -1,10 +1,9 @@
 import React , {useState} from 'react';
-import {data} from "./data.js";
+import data from "./data.js";
 import "../CSS/body.css";
 import "../CSS/search.css";
 import "../CSS/card.css";
 import "../CSS/responsive.css";
-import sx from "../images/sx.jpg";
 import { Button } from '@mui/material';
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
@@ -82,7 +81,7 @@ function Body() {
                     <div className='card-section' key={item.id}> 
                         <div className='card'>
                             <div className='card-img'>
-                                <img src={sx} />
+                                <img src={item.image} />
                             </div>
                             <div className='card-info'>
                                 <div className='heart'>

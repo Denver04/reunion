@@ -56,7 +56,7 @@ function Body() {
                     <label>Property type</label>
                     {/* <input type="search" className='type-search' placeholder='House, office or Company' onChange={(e)=>{setType(e.target.value)}}></input> */}
                     <select className='select-search' value={type} onChange={(e)=>{setType(e.target.value)}}>
-                        <option value="" disabled selected>Select your option</option>
+                        <option value="" disabled selected>Industry</option>
                         <option> </option>
                         <option>House</option>
                         <option>Company</option>

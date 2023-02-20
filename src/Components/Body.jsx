@@ -5,6 +5,7 @@ import "../CSS/search.css";
 import "../CSS/card.css";
 import "../CSS/responsive.css";
 import { Button } from '@mui/material';
+// import { useParams, Link } from "react-router-dom";
 import BedIcon from '@mui/icons-material/Bed';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import CropSquareIcon from '@mui/icons-material/CropSquare';
@@ -17,6 +18,8 @@ function Body() {
     const [type , setType] = useState("");
     const [ Lprice, setLPrice ] = useState(0);
     const [ Mprice, setMPrice ] = useState(5000000);
+
+    // let {id} = useParams();
 
   return (
     <div className='body'>
@@ -77,7 +80,8 @@ function Body() {
                     item.type.toLowerCase().includes(type.toLowerCase()) &&
                     item.price > parseInt(Lprice) &&
                     item.price < parseInt(Mprice)
-                }).map((item , key)=>(
+                }).map((item , id)=>(
+                    // <Link to={`/house/${item.id}`} >
                     <div className='card-section' key={item.id}> 
                         <div className='card'>
                             <div className='card-img'>
@@ -109,6 +113,7 @@ function Body() {
                             </div>
                         </div>
                     </div>
+                    // </Link>
                 ))
             }
         </div>
